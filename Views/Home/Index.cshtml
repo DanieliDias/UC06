@@ -1,0 +1,160 @@
+﻿@model Interesse
+@{
+    ViewData["Title"] = "Hotsite";
+}
+<div class="row">
+    <div class="col-6">
+        <h1>Iniciativa Saúde da Cidade</h1>
+        <p>
+            Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+            at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+        </p>
+        <p>
+            Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+            at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+        </p>
+    </div>
+
+    <div class="col-6 mb-3">
+        <img src="https://img.freepik.com/vetores-gratis/dia-mundial-da-saude-design-plano-de-fundo_23-2148444607.jpg"
+            style="width 40%">
+    </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-6 border border-dark p-3 ">
+
+        <h2>Entre em contato!:</h2>
+        <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+
+        <form action="/Home/Cadastrar"id ="formCadastro" method="POST">
+            <div>
+                <label asp-for="Nome">Nome:</label>
+                <input asp-for="Nome" id ="idNome"/>
+            </div>
+
+            <div>
+                <label asp-for="Email">Email:</label>
+                <input asp-for="Email"id ="idEmail"/>
+            </div>
+
+            <div class="formulario-div mt-3">
+                <label for="Mensagem" class="mr-2">Mensagem (opcional):</label>
+                <textarea asp-for="Mensagem" id ="idMensagem"></textarea>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Enviar" id ="idNome"/>
+            </div>
+        </form>
+    </div>
+
+    <figure class="col-2">
+        <img src="https://www.meupositivo.com.br/doseujeito/wp-content/uploads/2018/12/agenda-online-gratis.jpg" 
+        style="width:90%">
+        <figcaption><a href="#" data-toggle="modal" data-target="#idAgenda">Agenda de eventos</a></figcaption>
+    </figure>
+
+    <figure class="col-2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ4kkd7rI-YcghvdOWtirHTv1-Gqz9UWhJ3A&usqp=CAU" 
+        style="width:90%">
+        <figcaption><a href="#" data-toggle="modal" data-target="#idSaudavel">Dicas de vida saudável</a></figcaption>
+    </figure>
+
+     <figure class="col-2">
+        <img src="https://cmsudi.udelistmo.edu/sites/default/files/2022-07/que-es-ciencia-politica.png" 
+        style="width:90%">
+        <figcaption><a href="#" data-toggle="modal" data-target="#idApoio">Apoiadores</a></figcaption>
+    </figure>
+
+    <!-- Modal -->
+    <div class="modal fade" id="idAgenda" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agenda</h5>
+                </div>
+                <div class="modal-body">
+                    <p> 10/10/10 10:10 Evento 1 </p>
+                    <li>Lorem ipsum dolor sit amet et
+                        delectus accommodare his consul copiosae
+                    </li>
+                    <p> 10/10/10 10:20 - Evento 2 </p>
+                    <li>Lorem ipsum dolor sit amet et
+                        delectus accommodare his consul copiosae
+                    </li>
+                    <p> 10/10/10 10:30 - Evento 3</p>
+                    <li>Lorem ipsum dolor sit amet et
+                        delectus accommodare his consul copiosae
+                    </li>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="idSaudavel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dicas de vida saudável</h5>
+                </div>
+                <div class="modal-body">
+                    <h1>Dicas</h1>
+                    <h3>Lorem ipsum dolor sit amet et
+                        delectus accommodare his consul
+                        copiosae legend at vix ad putent
+                        delectus delicata usu.Vidit dissentiet
+                        eos
+                    </h3>
+                    <li>Dica 2</li>
+                    <h3> Lorem ipsum dolor sit amet et
+                        delectus accommodare his consul
+                        copiosae legend at vix ad putent
+                        delectus delicata usu.Vidit dissentiet
+                        eos
+                    </h3>
+                    <li>Dica 3</li>
+                    <h3>Lorem ipsum dolor sit amet et
+                        delectus accommodare his consul
+                        copiosae legend at vix ad putent
+                        delectus delicata usu.Vidit dissentiet
+                        eos
+                    </h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="idApoio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Apoiadores</h5>
+                </div>
+                <div class="modal-body">
+                    <img src=https://assets-global.website-files.com/5f10496c9447cf5c5c9baa96/60a7e87ebdce89815df98260_Plano%20de%20sau%CC%81de%20empresarial%20-%20tudo%20o%20que%20a%20sua%20empresa%20deve%20saber%20para%20contratar.png
+                        style="width:60%">
+                    <h2>Empresa Saúde 1</h2>
+                </div>
+
+                <div class="modal-body">
+                    <img src=https://salemadvogados.com/wp-content/uploads/2018/02/plano-de-saude-tratamentos-cobertura-obrigat%C3%B3ria.jpg
+                        style="width:60%">
+                    <h2>Empresa Saúde 2</h2>
+                </div>
+
+                <div class="modal-body">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSbUvKyEOcfrdgopVuA20u7cJHLqgic-pp2j81VEdTtVseC5d2SGafFOXqSWO4zq6v-88&usqp=CAU
+                        style="width:60%">
+                    <h2>Empresa Saúde 3</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
